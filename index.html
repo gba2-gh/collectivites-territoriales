@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#1f3a68">
+  <title>QCM Collectivités territoriales – Cat. A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <!-- Accueil -->
+    <section id="home" class="screen">
+      <h1>Collectivités territoriales</h1>
+      <p class="subtitle">QCM – Catégorie A · 2026</p>
+      <label>Thème
+        <select id="theme"></select>
+      </label>
+      <label>Nombre de questions
+        <select id="count">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="0">Toutes</option>
+        </select>
+      </label>
+      <button id="start" class="primary">Commencer</button>
+      <p id="best" class="muted"></p>
+    </section>
+
+    <!-- Quiz -->
+    <section id="quiz" class="screen hidden">
+      <div class="topbar">
+        <span id="progress"></span>
+        <span id="score"></span>
+      </div>
+      <div class="bar"><div id="bar-fill"></div></div>
+      <p id="q-theme" class="tag"></p>
+      <h2 id="q-text"></h2>
+      <div id="choices"></div>
+      <div id="feedback" class="hidden"></div>
+      <button id="next" class="primary hidden">Suivant</button>
+      <button id="quit" class="link">Abandonner</button>
+    </section>
+
+    <!-- Résultats -->
+    <section id="result" class="screen hidden">
+      <h2>Résultat</h2>
+      <p id="final" class="big"></p>
+      <div id="review"></div>
+      <button id="retry-wrong" class="primary">Revoir mes erreurs</button>
+      <button id="home-btn">Accueil</button>
+    </section>
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
